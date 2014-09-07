@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+var app = require('../index');
+
+app.set('port', process.env.PORT || 3456);
+
+var server = app.listen(app.get('port'), function() {
+  console.log('React dojo chat examples: http://localhost:' + server.address().port);
+});
